@@ -1,8 +1,9 @@
 import {combineReducers} from 'redux';
-import characters from './characters';
+import characters        from './characters';
+import notifications     from './notifications';
 
 const rootReducer = combineReducers({
-    characters
+	characters, notifications,
 });
 
 export default rootReducer

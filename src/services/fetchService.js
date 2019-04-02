@@ -1,10 +1,10 @@
-import service from './ApiCallsMiddleware'
+import service from './apiCallsMiddleware'
 
 export default function (request, requestAction, successAction, errorAction, timeout) {
   return async (dispatch) => {
-    dispatch(requestAction())
+    dispatch(requestAction());
     try {
-      const response = await service(request, timeout)
+      const response = await service(request, timeout);
       dispatch(successAction(response))
     } catch (error) {
       dispatch(errorAction(error))
